@@ -1,8 +1,18 @@
 package chap_1;
 
-public class Account {
+public class Account implements Comparable<Account>{
 	String accountNo;
-	
+	int number;
+	int zandaka;
+	public int compareTo (Account obj) {
+		if(this.number < obj.number) {
+			return -1;
+		}
+		if(this.number > obj.number) {
+			return 1;
+		}
+		return 0;
+	}
 	public boolean equals(Object o) {
 		if(o == this) return true;
 		if(o == null) return false;
