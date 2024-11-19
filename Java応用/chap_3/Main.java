@@ -7,7 +7,8 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		Function<String, Integer> func = Main::len;
+		Function<String, Integer> func = 
+				(String s) -> {return s.length();};
 		int a = func.apply("Java");
 		System.out.println("文字列「Java」は" + a +"文字です");
 	}
